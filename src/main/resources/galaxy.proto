@@ -1,0 +1,38 @@
+syntax = "proto2";
+
+package netty;
+option java_package = "com.lilac.object";
+option java_outer_classname = "Galaxy";
+
+message heartbeatDTO{
+     repeated Result result = 1;
+     repeated Data data = 2;
+}
+
+message Result {
+     optional bool success = 1;
+     optional int64 code = 2;
+     optional string msg = 3;
+     optional string displaymsg = 4;
+}
+
+message Data{
+    repeated Server sever = 1;
+}
+
+message Server{
+     optional string name = 1;
+     optional string error = 2;
+}
+
+
+message ServerTest{
+      optional string name = 1;
+      optional string error = 2;
+ }
+
+ message Student{
+      optional string name = 1;
+      optional string address = 2;
+      optional int32 age = 3;
+ }
